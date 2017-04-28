@@ -1,0 +1,13 @@
+if [[ $DEBUG != "" ]]; then set -x; fi
+
+case `distribution` in
+    Funtoo|Gentoo)
+        local emerge=`which emerge`
+
+        sudo zsh -c "
+            ${emerge} -auDN @world
+        "
+        ;;
+    unknown) echo "Unknown distribution, please report.";;
+    *)       echo "Known, but unhandled distribution `distribution`, please report.";;
+esac

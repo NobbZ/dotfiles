@@ -1,0 +1,7 @@
+local linux_version=`cat /proc/version`
+
+case $linux_version in
+    *Funtoo*) echo "Funtoo";;
+    *Gentoo*) echo "Gentoo";;
+    *)        echo "unknown";;
+esac
