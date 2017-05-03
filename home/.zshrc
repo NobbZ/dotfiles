@@ -10,6 +10,7 @@ source $HOME/.aliases
 
 if [[ -d $HOME/gopath ]]; then
     export GOPATH="$HOME/gopath"
+    export PATH="$GOPATH/bin:$PATH"
 fi
 
 autoload -U compinit promptinit
