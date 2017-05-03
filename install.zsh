@@ -91,7 +91,7 @@ h1 Prechecks
 check sha1sum
 
 h1 Finding files
-local files=(`find home -type f`)
+local files=(`find home -type f -not -name '*~'`)
 
 h1 "Copying files"
 cp_files $files
