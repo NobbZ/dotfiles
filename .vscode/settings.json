@@ -3,6 +3,7 @@
     "files.associations": {
         "distribution": "shellscript",
         "update_packages": "shellscript",
-        "upgrade_packages": "shellscript"
+        "upgrade_packages": "shellscript",
+        "vscode": "shellscript"
     }
 }

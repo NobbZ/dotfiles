@@ -1,0 +1,11 @@
+local code=(
+    `which visual-studio-code`
+    `which code`
+)
+
+for c in $code; do
+    if [[ -f $c ]]; then
+        $c $@&
+        break
+    fi
+done
