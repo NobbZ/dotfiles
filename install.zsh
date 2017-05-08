@@ -65,8 +65,8 @@ function compare_and_copy_files () {
     local src=$1
     local dest=$2
 
-    local sum_src=`sha1sum $src | cut -d ' ' -f 1`
-    local sum_dest=`sha1sum $dest | cut -d ' ' -f 1`
+    local sum_src=`sha1sum $src 2>/dev/null | cut -d ' ' -f 1`
+    local sum_dest=`sha1sum $dest 2>/dev/null | cut -d ' ' -f 1`
 
     if [[ $sum_src != $sum_dest ]]; then
         echo $cp
