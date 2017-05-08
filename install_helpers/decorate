@@ -1,0 +1,7 @@
+local opts=()
+if [[ $1 == "-n" ]]; then
+    opts=($opts -n); shift
+fi
+local prefix=$1; shift
+local suffix=$1; shift
+echo $opts "$prefix$@$suffix" 

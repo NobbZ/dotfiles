@@ -7,6 +7,20 @@
 ### run on platforms that don't support symlinking. Perhaps there will be added
 ### an option later on, that recognises those platforms. 
 
+if [[ $1 == "-d" ]]; then
+    set -x; shift
+fi
+
+fpath=(install_helpers $fpath)
+
+local funs=(
+    decorate
+)
+
+for f in $funs; do
+    autoload -U $f
+done
+
 autoload -U colors; colors
 
 if [[ $1 == "help" ]]; then
@@ -27,16 +41,6 @@ local fail="\t[${fg[red]}FAIL${default}]"
 
 local cp="\t[${fg[green]} CP ${default}]"
 local skip="\t[${fg[yellow]}SKIP${default}]"
-
-function decorate () {
-    local opts=()
-    if [[ $1 == "-n" ]]; then
-        opts=($opts -n); shift
-    fi
-    local prefix=$1; shift
-    local suffix=$1; shift
-    echo $opts "$prefix$@$suffix" 
-}
 
 function h1 () {
     decorate $h1 $default "*** $@ ***"
