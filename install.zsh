@@ -16,6 +16,7 @@ fpath=(install_helpers $fpath)
 local funs=(
     decorate
     h1
+    h2
 )
 
 for f in $funs; do
@@ -42,19 +43,6 @@ local fail="\t[${fg[red]}FAIL${default}]"
 
 local cp="\t[${fg[green]} CP ${default}]"
 local skip="\t[${fg[yellow]}SKIP${default}]"
-
-function h1 () {
-    decorate $h1 $default "*** $@ ***"
-}
-
-function h2 () {
-    if [[ $1 == "-n" ]]; then
-        shift
-        decorate -n $h2 $default " *  $@"
-    else
-        decorate $h2 $default " *  $@"
-    fi
-}
 
 function check () {
     h2 -n Check if "'$1'" is available

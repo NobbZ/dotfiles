@@ -1,0 +1,6 @@
+if [[ $1 == "-n" ]]; then
+    shift
+    decorate -n $h2 $default " *  $@"
+else
+    decorate $h2 $default " *  $@"
+fi

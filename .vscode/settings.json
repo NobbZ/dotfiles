@@ -3,6 +3,7 @@
     "files.associations": {
         "decorate": "shellscript",
         "h1": "shellscript",
+        "h2": "shellscript",
 
         "distribution": "shellscript",
         "update_packages": "shellscript",
