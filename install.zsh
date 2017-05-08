@@ -15,6 +15,7 @@ fpath=(install_helpers $fpath)
 
 local funs=(
     decorate
+    h1
 )
 
 for f in $funs; do

@@ -1,0 +1,1 @@
+decorate $h1 $default "*** $@ ***"
