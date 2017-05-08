@@ -9,3 +9,7 @@ for c in $code; do
         break
     fi
 done
+
+echo "There is no visual-studio-code installed."
+
+return 1
