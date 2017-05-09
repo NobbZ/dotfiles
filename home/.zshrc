@@ -1,5 +1,8 @@
 source ~/.zsh/functions.zsh
 
+zle -N expand_or_complete_with_dots
+bindkey "^I" expand_or_complete_with_dots
+
 function colors_enabled () {
     local num_colors=`tput colors`
     local retval=`test -n $num_colors && test $num_colors -ge 8`
