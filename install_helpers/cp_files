@@ -1,0 +1,6 @@
+for src in $@; do
+    local abs_src=`readlink -f $src`
+    local dest=$HOME/${src#home/}
+    h2 -n Copying "'$abs_src'" to "'$dest'"
+    compare_and_copy_files $abs_src $dest
+done

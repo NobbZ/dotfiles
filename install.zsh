@@ -16,6 +16,7 @@ fpath=(install_helpers $fpath)
 local funs=(
     check
     compare_and_copy_files
+    cp_files
     decorate
     h1
     h2
@@ -45,15 +46,6 @@ local fail="\t[${fg[red]}FAIL${default}]"
 
 local cp="\t[${fg[green]} CP ${default}]"
 local skip="\t[${fg[yellow]}SKIP${default}]"
-
-function cp_files () {
-    for src in $@; do
-        local abs_src=`readlink -f $src`
-        local dest=$HOME/${src#home/}
-        h2 -n Copying "'$abs_src'" to "'$dest'"
-        compare_and_copy_files $abs_src $dest
-    done
-}
 
 LANG=C
 
