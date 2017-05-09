@@ -14,6 +14,7 @@ fi
 fpath=(install_helpers $fpath)
 
 local funs=(
+    check
     decorate
     h1
     h2
@@ -43,16 +44,6 @@ local fail="\t[${fg[red]}FAIL${default}]"
 
 local cp="\t[${fg[green]} CP ${default}]"
 local skip="\t[${fg[yellow]}SKIP${default}]"
-
-function check () {
-    h2 -n Check if "'$1'" is available
-    if which $1 > /dev/null 2> /dev/null; then
-        echo $ok
-    else
-        echo $fail
-        exit 1
-    fi
-}
 
 function compare_and_copy_files () {
     local src=$1

@@ -1,6 +1,7 @@
 // Platzieren Sie Ihre Einstellungen in dieser Datei, um Standard- und Benutzereinstellungen zu überschreiben.
 {
     "files.associations": {
+        "check": "shellscript",
         "decorate": "shellscript",
         "h1": "shellscript",
         "h2": "shellscript",
