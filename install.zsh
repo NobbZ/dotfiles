@@ -15,6 +15,7 @@ fpath=(install_helpers $fpath)
 
 local funs=(
     check
+    compare_and_copy_files
     decorate
     h1
     h2
@@ -44,21 +45,6 @@ local fail="\t[${fg[red]}FAIL${default}]"
 
 local cp="\t[${fg[green]} CP ${default}]"
 local skip="\t[${fg[yellow]}SKIP${default}]"
-
-function compare_and_copy_files () {
-    local src=$1
-    local dest=$2
-
-    local sum_src=`sha1sum $src 2>/dev/null | cut -d ' ' -f 1`
-    local sum_dest=`sha1sum $dest 2>/dev/null | cut -d ' ' -f 1`
-
-    if [[ $sum_src != $sum_dest ]]; then
-        echo $cp
-        cp $src $dest
-    else
-        echo $skip
-    fi
-}
 
 function cp_files () {
     for src in $@; do

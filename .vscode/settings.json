@@ -2,6 +2,7 @@
 {
     "files.associations": {
         "check": "shellscript",
+        "compare_and_copy_files": "shellscript",
         "decorate": "shellscript",
         "h1": "shellscript",
         "h2": "shellscript",
