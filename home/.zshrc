@@ -18,7 +18,9 @@ fi
 
 autoload -U compinit promptinit
 compinit
-promptinit; prompt gentoo
+promptinit
+
+prompt adam2
 
 zstyle ':completion::complete:*' use-cache 1
 
