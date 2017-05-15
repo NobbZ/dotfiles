@@ -20,7 +20,7 @@ autoload -U compinit promptinit
 compinit
 promptinit
 
-prompt adam2
+prompt oliver
 
 zstyle ':completion::complete:*' use-cache 1
 
