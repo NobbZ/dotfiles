@@ -6,13 +6,10 @@ case `distribution` in
     Funtoo|Gentoo)
         local emerge=`which emerge`
         local layman=`which layman`
-        local zsh=`which zsh`
 
-        sudo zsh -c "
-            ${emerge} --sync;
-            ${layman} -S;
-            ${emerge} --regen;
-        "
+        sudo ${emerge} --sync
+        sudo ${layman} -S
+        sudo ${emerge} --regen
         ;;
     unknown) echo "Unknown distribution, please report.";;
     *)       echo "Known, but unhandled distribution `distribution`, please report.";;
