@@ -6,7 +6,7 @@ local code=(
 for c in $code; do
     if [[ -f $c ]]; then
         $c $@&
-        break
+        return 0
     fi
 done
 
