@@ -8,7 +8,7 @@
 ### an option later on, that recognises those platforms. 
 
 if [[ $1 == "-d" ]]; then
-    set -x; shift
+    set -ex; shift
 fi
 
 fpath=(install_helpers $fpath)
