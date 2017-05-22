@@ -4,9 +4,9 @@ if [[ $DEBUG != "" ]]; then set -x; fi
 
 case `distribution` in
     Funtoo|Gentoo)
-        local eix-sync=`which eix-sync`
+        local eix_sync=`which eix-sync`
 
-        sudo ${eix-sync}
+        sudo ${eix_sync}
         ;;
     unknown) echo "Unknown distribution, please report.";;
     *)       echo "Known, but unhandled distribution `distribution`, please report.";;
