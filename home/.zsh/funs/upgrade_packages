@@ -6,7 +6,7 @@ case `distribution` in
     Funtoo|Gentoo)
         local emerge=`which emerge`
 
-        sudo ${emerge} -auDN @world
+        sudo ${emerge} -avuDN @world
         ;;
     unknown) echo "Unknown distribution, please report.";;
     *)       echo "Known, but unhandled distribution `distribution`, please report.";;
