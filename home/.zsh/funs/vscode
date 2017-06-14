@@ -1,6 +1,7 @@
 local code=(
     `which visual-studio-code`
     `which code`
+    `which code-insiders`
 )
 
 for c in $code; do
