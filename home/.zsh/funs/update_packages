@@ -8,6 +8,8 @@ case `distribution` in
 
         sudo ${eix_sync}
         ;;
+    Ubuntu)
+        sudo apt update;;
     unknown) echo "Unknown distribution, please report.";;
     *)       echo "Known, but unhandled distribution `distribution`, please report.";;
 esac

@@ -3,5 +3,6 @@ local linux_version=`cat /proc/version`
 case $linux_version in
     *Funtoo*) echo "Funtoo";;
     *Gentoo*) echo "Gentoo";;
+    *Ubuntu*) echo "Ubuntu";;
     *)        echo "unknown";;
 esac

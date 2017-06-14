@@ -9,6 +9,8 @@ case `distribution` in
         sudo ${emerge} -avuDN @world
         sudo ${emerge} --depclean
         ;;
+    Ubuntu)
+        sudo apt upgrade;;
     unknown) echo "Unknown distribution, please report.";;
     *)       echo "Known, but unhandled distribution `distribution`, please report.";;
 esac
