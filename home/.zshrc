@@ -16,6 +16,10 @@ if [[ -d $HOME/gopath ]]; then
     export PATH="$GOPATH/bin:$PATH"
 fi
 
+if which ruby > /dev/null 2> /dev/null; then
+    export PATH=`gem env gemdir`/bin:$PATH
+fi
+
 autoload -U compinit promptinit
 compinit
 promptinit
@@ -23,6 +27,7 @@ promptinit
 prompt oliver
 
 zstyle ':completion::complete:*' use-cache 1
+zstyle ':completion:*' menu select
 
 if which emacs > /dev/null 2> /dev/null; then
     export EDITOR="`which emacs` -nw"
