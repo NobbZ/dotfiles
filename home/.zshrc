@@ -11,8 +11,8 @@ function colors_enabled () {
 
 source $HOME/.aliases
 
-if [[ -d $HOME/gopath ]]; then
-    export GOPATH="$HOME/gopath"
+if [[ -d $HOME/go ]]; then
+    export GOPATH="$HOME/go"
     export PATH="$GOPATH/bin:$PATH"
 fi
 
