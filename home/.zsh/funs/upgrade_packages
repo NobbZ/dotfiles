@@ -10,7 +10,10 @@ case `distribution` in
         sudo ${emerge} --depclean
         ;;
     Ubuntu)
-        sudo apt upgrade;;
+        sudo apt upgrade
+        sudo apt autoremove
+        sudo apt autoclean
+        ;;
     unknown) echo "Unknown distribution, please report.";;
     *)       echo "Known, but unhandled distribution `distribution`, please report.";;
 esac
