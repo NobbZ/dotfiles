@@ -9,6 +9,7 @@
         "h2": "shellscript",
 
         "distribution": "shellscript",
+        "expand_or_complete_with_dots": "shellscript",
         "update_packages": "shellscript",
         "upgrade_packages": "shellscript",
         "vscode": "shellscript"
