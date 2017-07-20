@@ -28,6 +28,10 @@ if which ruby > /dev/null 2> /dev/null; then
     export PATH=`gem env gemdir`/bin:$PATH
 fi
 
+if [[ -d $HOME/.cargo ]]; then
+    export PATH="$HOME/.cargo/bin":$PATH
+fi
+
 autoload -U compinit promptinit
 compinit
 promptinit
