@@ -16,6 +16,10 @@ if [[ -d $HOME/go ]]; then
     export PATH="$GOPATH/bin:$PATH"
 fi
 
+if [[ -d $HOME/.cargo ]]; then
+    export PATH="$HOME/.cargo/bin":$PATH
+fi
+
 if which ruby > /dev/null 2> /dev/null; then
     export PATH=`gem env gemdir`/bin:$PATH
 fi
