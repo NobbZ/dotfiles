@@ -20,6 +20,10 @@ if [[ -d $HOME/.cargo ]]; then
     export PATH="$HOME/.cargo/bin":$PATH
 fi
 
+if [[ -d $HOME/.asdf ]]; then
+    source $HOME/.asdf/asdf.sh
+fi
+
 if which ruby > /dev/null 2> /dev/null; then
     export PATH=`gem env gemdir`/bin:$PATH
 fi
@@ -36,3 +40,4 @@ zstyle ':completion:*' menu select
 if which emacs > /dev/null 2> /dev/null; then
     export EDITOR="`which emacs` -nw"
 fi
+
