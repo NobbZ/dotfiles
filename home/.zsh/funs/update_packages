@@ -4,9 +4,11 @@ if [[ $DEBUG != "" ]]; then set -x; fi
 
 case `distribution` in
     Funtoo|Gentoo)
-        local eix_sync=`which eix-sync`
+        local layman=`which layman`
+        local ego=`which ego`
 
-        sudo ${eix_sync}
+        sudo ${layman} -S
+        sudo ${ego} sync
         ;;
     Ubuntu)
         sudo apt update;;
