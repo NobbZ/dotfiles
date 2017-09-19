@@ -10,6 +10,7 @@ case `distribution` in
         sudo ${layman} -S
         sudo ${ego} sync
         sudo eix-update
+        sudo eix-diff
         ;;
     Ubuntu)
         sudo apt update;;
