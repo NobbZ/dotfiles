@@ -6,7 +6,7 @@ case `distribution` in
     Funtoo|Gentoo)
         local emerge=`which emerge`
 
-        sudo ${emerge} -avuDN @world
+        sudo ${emerge} -avuDN --keep-going=y @world
         sudo ${emerge} --depclean
         ;;
     Ubuntu)
