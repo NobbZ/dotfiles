@@ -7,10 +7,8 @@ case `distribution` in
         local layman=`which layman`
         local ego=`which ego`
 
-        sudo ${layman} -S
         sudo ${ego} sync
-        sudo eix-update
-        sudo eix-diff
+        sudo eix-sync
         ;;
     Ubuntu)
         sudo apt update;;
