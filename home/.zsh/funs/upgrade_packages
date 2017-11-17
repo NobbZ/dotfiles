@@ -8,6 +8,7 @@ case `distribution` in
 
         sudo ${emerge} -avuDN --keep-going=y @world
         sudo ${emerge} --depclean
+        sudo eclean-dist
         ;;
     Ubuntu)
         sudo apt upgrade
