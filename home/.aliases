@@ -1,5 +1,5 @@
 # -*- mode: sh -*-
 
-alias ll="ls -lah"
+alias ll="ls --color -lah"
 alias ..="cd .."
 alias cd..="cd .."
