@@ -7,7 +7,6 @@ case `distribution` in
         local layman=`which layman`
         local ego=`which ego`
 
-        sudo ${ego} sync
         sudo eix-sync
         ;;
     Ubuntu)
