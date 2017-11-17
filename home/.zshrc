@@ -16,13 +16,17 @@ if [[ -d $HOME/go ]]; then
     export PATH="$GOPATH/bin:$PATH"
 fi
 
-if [[ -d $HOME/bin ]]; then
-    export PATH="$HOME/bin:$PATH"
-fi
+pathes=(
+    "$HOME/bin"
+    "$HOME/.local/bin"
+    "$HOME/.cargo/bin"
+)
 
-if [[ -d $HOME/.cargo ]]; then
-    export PATH="$HOME/.cargo/bin":$PATH
-fi
+for p in $pathes; do
+    if  [[ -d $p ]]; then
+        export PATH=$p:$PATH
+    fi
+done
 
 if [[ -d $HOME/.asdf ]]; then
     source $HOME/.asdf/asdf.sh
@@ -48,4 +52,3 @@ zstyle ':completion:*' menu select
 if which emacs > /dev/null 2> /dev/null; then
     export EDITOR="`which emacs` -nw"
 fi
-
