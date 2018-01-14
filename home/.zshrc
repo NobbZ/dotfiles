@@ -20,6 +20,7 @@ pathes=(
     "$HOME/bin"
     "$HOME/.local/bin"
     "$HOME/.cargo/bin"
+    "$HOME/.cask/bin"
 )
 
 for p in $pathes; do
